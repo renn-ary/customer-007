@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#123d35" />
+    <meta
+      property="og:title"
+      content="Reuni Keluarga Besar Bani Sutajib Jatisumber"
+    />
+    <meta
+      property="og:description"
+      content="Minggu, 20 Desember 2026 · Jatisumber, Mojokerto"
+    />
+    <title>Reuni Keluarga Besar Bani Sutajib Jatisumber</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  </head>
+  <body>
+    <div id="loader" class="loader-wrapper">
+      <div id="lottie-container"></div>
+      <span class="loader-caption">Bani Sutajib · Jatisumber</span>
+    </div>
+
+    <audio id="bgMusic" loop>
+      <source src="Assets/Audio/backsound.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- COVER / AMPLOP DIGITAL -->
+    <section id="cover" class="cover-page">
+      <div class="cover-frame">
+        <div class="cover-topline">
+          <span>✦</span> FORUM SILATUROHIM <span>✦</span>
+        </div>
+        <div class="cover-emblem">BS</div>
+        <p class="cover-kicker">KELUARGA BESAR</p>
+        <h1 class="cover-family">BANI SUTAJIB</h1>
+        <p class="cover-place">J A T I S U M B E R</p>
+        <div class="gold-rule"><span>✦</span></div>
+        <p class="cover-invite-label">UNDANGAN REUNI KELUARGA</p>
+        <p class="cover-date">MINGGU, 20 DESEMBER 2026</p>
+        <div class="cover-recipient">
+          <span>Kepada Yth.</span>
+          <strong id="guestName">Keluarga Besar Bani Sutajib</strong>
+          <small>Di tempat</small>
+        </div>
+        <button class="btn-open" id="openBtn">
+          <span class="material-symbols-rounded">mail</span> BUKA UNDANGAN
+        </button>
+        <p class="cover-bottom-note">
+          Merajut silaturahmi, menguatkan ikatan keluarga
+        </p>
+      </div>
+    </section>
+
+    <nav class="floating-nav hidden" aria-label="Navigasi undangan">
+      <a href="#countdown" class="nav-item active" aria-label="Pembuka"
+        ><span class="material-symbols-rounded">home</span></a
+      >
+      <a href="#couple" class="nav-item" aria-label="Undangan"
+        ><span class="material-symbols-rounded">groups</span></a
+      >
+      <a href="#event" class="nav-item" aria-label="Acara"
+        ><span class="material-symbols-rounded">event</span></a
+      >
+      <a href="#gift" class="nav-item" aria-label="Pesan"
+        ><span class="material-symbols-rounded">favorite</span></a
+      >
+      <a href="#rsvp" class="nav-item" aria-label="Konfirmasi"
+        ><span class="material-symbols-rounded">checklist</span></a
+      >
+      <a href="#wishes" class="nav-item" aria-label="Ucapan"
+        ><span class="material-symbols-rounded">chat</span></a
+      >
+    </nav>
+    <button
+      id="musicToggle"
+      class="music-control-btn hidden"
+      aria-label="Putar atau jeda musik"
+    >
+      <span class="material-symbols-rounded">volume_up</span>
+    </button>
+
+    <main id="mainContent" class="main-content hidden">
+      <!-- PEMBUKA -->
+      <section id="countdown" class="section section-countdown">
+        <div class="paper-card opening-card">
+          <p class="eyebrow scroll-animate">THE FAMILY GATHERING</p>
+          <div class="monogram-large scroll-animate">BS</div>
+          <p class="small-caps scroll-animate">
+            FORUM SILATUROHIM KELUARGA BESAR
+          </p>
+          <h2 class="family-title scroll-animate">Bani Sutajib</h2>
+          <p class="location-script scroll-animate">Jatisumber</p>
+          <div class="ornament-divider"><span>❧</span></div>
+          <p class="opening-copy scroll-animate">
+            Dengan penuh rasa syukur dan bahagia, kami mengundang seluruh
+            keluarga untuk hadir dalam acara reuni keluarga besar.
+          </p>
+          <h3 class="date-display scroll-animate">
+            20 <span>DESEMBER</span> 2026
+          </h3>
+          <p class="day-display scroll-animate">MINGGU · PUKUL 08.00 WIB</p>
+          <div class="countdown-timer scroll-animate" id="countdownTimer">
+            <div class="time-box">
+              <span class="time-number" id="days">00</span
+              ><span class="time-label">Hari</span>
+            </div>
+            <div class="time-box">
+              <span class="time-number" id="hours">00</span
+              ><span class="time-label">Jam</span>
+            </div>
+            <div class="time-box">
+              <span class="time-number" id="minutes">00</span
+              ><span class="time-label">Menit</span>
+            </div>
+            <div class="time-box">
+              <span class="time-number" id="seconds">00</span
+              ><span class="time-label">Detik</span>
+            </div>
+          </div>
+          <a
+            class="btn-outline scroll-animate"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Reuni%20Keluarga%20Besar%20Bani%20Sutajib&dates=20261220T010000Z/20261220T050000Z&details=Reuni%20Keluarga%20Besar%20Bani%20Sutajib%20Jatisumber&location=Rumah%20Ibu%20Uswatun%20Khasanah%2C%20Modongan%2C%20Mojokerto"
+            target="_blank"
+            rel="noopener"
+            ><span class="material-symbols-rounded">calendar_month</span> SIMPAN
+            TANGGAL</a
+          >
+        </div>
+      </section>
+
+      <!-- SURAT UNDANGAN -->
+      <section id="couple" class="section section-invitation">
+        <div class="invitation-panel">
+          <p class="eyebrow-light scroll-animate">UNDANGAN SILATUROHIM</p>
+          <div class="gold-emblem scroll-animate">✦</div>
+          <h2 class="invitation-heading scroll-animate">
+            Assalamu'alaikum<br /><i>Warahmatullahi Wabarakatuh</i>
+          </h2>
+          <div class="gold-line"></div>
+          <p class="invitation-body scroll-animate">
+            Dengan ini kami memberitahukan bahwa reuni keluarga besar
+            <strong>“BANI SUTAJIB JATISUMBER”</strong> insyaallah akan
+            dilaksanakan pada:
+          </p>
+          <div class="invitation-detail scroll-animate">
+            <span class="detail-label">ACARA</span>
+            <strong>Reuni Keluarga Besar<br />“BANI SUTAJIB JATISUMBER”</strong>
+          </div>
+          <p class="invitation-body scroll-animate">
+            Merupakan suatu kebahagiaan bagi kami apabila seluruh keluarga dapat
+            hadir untuk mempererat tali persaudaraan dan menjaga silaturahmi.
+          </p>
+          <p class="invitation-closing scroll-animate">
+            Demikian undangan ini kami sampaikan. Atas perhatian dan
+            kehadirannya, kami ucapkan terima kasih.
+          </p>
+          <p class="salam-closing scroll-animate">Wassalamu'alaikum Wr. Wb.</p>
+          <div class="signature-grid scroll-animate">
+            <div><span>Sekretaris</span><strong>K. ZAHRO</strong></div>
+            <div><span>Ketua</span><strong>M. ALI HIDAYAT</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAIL ACARA -->
+      <section id="event" class="section section-event">
+        <div class="event-heading">
+          <p class="eyebrow scroll-animate">SAVE THE DATE</p>
+          <h2 class="section-title scroll-animate">Detail <i>Acara</i></h2>
+          <p class="section-subtitle scroll-animate">
+            Catat waktu dan tempat pertemuan keluarga kita
+          </p>
+        </div>
+        <div class="event-card">
+          <div class="event-card-top">
+            <span>✦</span> THE BIG DAY <span>✦</span>
+          </div>
+          <div class="event-detail-row scroll-animate">
+            <div class="event-icon">
+              <span class="material-symbols-rounded">calendar_month</span>
+            </div>
+            <div>
+              <span class="event-label">HARI & TANGGAL</span>
+              <h3>Minggu</h3>
+              <p>20 Desember 2026</p>
+            </div>
+          </div>
+          <div class="event-detail-row scroll-animate">
+            <div class="event-icon">
+              <span class="material-symbols-rounded">schedule</span>
+            </div>
+            <div>
+              <span class="event-label">WAKTU</span>
+              <h3>08.00 WIB</h3>
+              <p>Dimulai pukul 08.00 pagi</p>
+            </div>
+          </div>
+          <div class="event-detail-row scroll-animate">
+            <div class="event-icon">
+              <span class="material-symbols-rounded">location_on</span>
+            </div>
+            <div>
+              <span class="event-label">TEMPAT</span>
+              <h3>Rumah Ibu Uswatun Khasanah / Bpk. Yudi Sasap</h3>
+              <p>Modongan, Mojokerto</p>
+            </div>
+          </div>
+          <a
+            class="btn-map scroll-animate"
+            href="https://www.google.com/maps/search/?api=1&query=Modongan%2C%20Mojokerto%2C%20Jawa%20Timur"
+            target="_blank"
+            rel="noopener"
+            ><span class="material-symbols-rounded">map</span> LIHAT LOKASI</a
+          >
+          <p class="event-footnote">
+            Dusun Jatisumber, Desa Watesumpak, Trowulan, Mojokerto
+          </p>
+        </div>
+      </section>
+
+      <!-- PESAN KELUARGA -->
+      <section id="gift" class="section section-message">
+        <div class="message-inner">
+          <p class="eyebrow-light scroll-animate">A GIFT OF LOVE</p>
+          <div class="gold-emblem scroll-animate">❧</div>
+          <h2 class="message-title scroll-animate">
+            Satu Keluarga,<br /><i>Sejuta Cerita</i>
+          </h2>
+          <p class="message-copy scroll-animate">
+            Jarak dan kesibukan mungkin membuat kita jarang berjumpa. Namun
+            ikatan keluarga akan selalu menyatukan kita. Mari hadir, berbagi
+            cerita, mengenang kebersamaan, dan mempererat tali silaturahmi.
+          </p>
+          <div class="message-sign scroll-animate">
+            Sampai bertemu di hari bahagia
+          </div>
+          <div class="small-heart">♡</div>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section id="rsvp" class="section section-rsvp">
+        <div class="form-wrap">
+          <p class="eyebrow scroll-animate">KONFIRMASI KEHADIRAN</p>
+          <h2 class="section-title scroll-animate">Mohon <i>Konfirmasi</i></h2>
+          <p class="section-subtitle scroll-animate">
+            Bantu panitia mempersiapkan acara dengan mengisi konfirmasi berikut.
+          </p>
+          <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group scroll-animate">
+              <label for="rsvpName">Nama lengkap</label
+              ><input
+                type="text"
+                id="rsvpName"
+                name="name"
+                required
+                placeholder="Nama Anda"
+              />
+            </div>
+            <div class="form-group scroll-animate">
+              <label for="rsvpAttendance">Konfirmasi kehadiran</label
+              ><select id="rsvpAttendance" name="attendance" required>
+                <option value="">Pilih konfirmasi</option>
+                <option value="hadir">Insyaallah hadir</option>
+                <option value="tidak_hadir">Belum bisa hadir</option>
+                <option value="ragu">Masih tentatif</option>
+              </select>
+            </div>
+            <div class="form-group scroll-animate">
+              <label for="rsvpGuests">Jumlah yang hadir</label
+              ><input
+                type="number"
+                id="rsvpGuests"
+                name="guests"
+                min="1"
+                max="20"
+                value="1"
+              />
+            </div>
+            <div class="form-group scroll-animate">
+              <label for="rsvpMessage">Pesan (opsional)</label
+              ><textarea
+                id="rsvpMessage"
+                name="message"
+                rows="3"
+                placeholder="Tuliskan pesan untuk keluarga"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit scroll-animate">
+              <span class="material-symbols-rounded">send</span> KIRIM
+              KONFIRMASI
+            </button>
+          </form>
+          <div class="rsvp-status" id="rsvpStatus"></div>
+        </div>
+      </section>
+
+      <!-- UCAPAN -->
+      <section id="wishes" class="section section-wishes">
+        <div class="form-wrap">
+          <p class="eyebrow scroll-animate">FAMILY WISHES</p>
+          <h2 class="section-title scroll-animate">Pesan & <i>Doa</i></h2>
+          <p class="section-subtitle scroll-animate">
+            Tinggalkan pesan hangat untuk keluarga besar Bani Sutajib.
+          </p>
+          <form class="wishes-form" id="wishesForm">
+            <div class="form-group scroll-animate">
+              <label for="wishName">Nama</label
+              ><input
+                type="text"
+                id="wishName"
+                name="name"
+                required
+                placeholder="Nama Anda"
+              />
+            </div>
+            <div class="form-group scroll-animate">
+              <label for="wishStatus">Bagian keluarga</label
+              ><select id="wishStatus" name="status" required>
+                <option value="">Pilih</option>
+                <option value="Keluarga">Keluarga</option>
+                <option value="Kerabat">Kerabat</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group scroll-animate">
+              <label for="wishMessage">Ucapan dan doa</label
+              ><textarea
+                id="wishMessage"
+                name="message"
+                rows="4"
+                required
+                placeholder="Tuliskan pesan dan doa..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit scroll-animate">
+              <span class="material-symbols-rounded">favorite</span> KIRIM
+              UCAPAN
+            </button>
+          </form>
+          <div class="wishes-list" id="wishesList"></div>
+        </div>
+      </section>
+
+      <!-- PENUTUP -->
+      <section id="closing" class="section section-closing">
+        <div class="closing-frame">
+          <p class="eyebrow-light scroll-animate">
+            FORUM SILATUROHIM KELUARGA BESAR
+          </p>
+          <div class="closing-monogram scroll-animate">BS</div>
+          <h2 class="closing-title scroll-animate">Bani Sutajib</h2>
+          <p class="closing-place scroll-animate">J A T I S U M B E R</p>
+          <div class="gold-line"></div>
+          <p class="closing-text scroll-animate">
+            Terima kasih atas perhatian dan kesediaan seluruh keluarga. Semoga
+            Allah SWT senantiasa memberikan kesehatan, keberkahan, dan menjaga
+            tali silaturahmi di antara kita.
+          </p>
+          <p class="closing-salam scroll-animate">Wassalamu'alaikum Wr. Wb.</p>
+          <p class="closing-thank-you scroll-animate">Sampai berjumpa</p>
+          <p class="closing-date scroll-animate">MINGGU · 20 DESEMBER 2026</p>
+          <span class="closing-heart">♡</span>
+        </div>
+      </section>
+      <footer class="footer">
+        <span>✦</span> BANI SUTAJIB JATISUMBER <span>✦</span>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
